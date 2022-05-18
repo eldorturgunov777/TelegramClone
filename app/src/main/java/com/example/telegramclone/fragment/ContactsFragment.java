@@ -46,53 +46,22 @@ public class ContactsFragment extends Fragment {
     }
 
     private void data() {
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
-        list.add(new ListData(R.drawable.img1, "Eldor Turgunov", "online"));
+        list.add(new ListData(R.drawable.img1, "Юлдашева Назира Мирмақсудовна", "online"));
+        list.add(new ListData(R.drawable.img2, "Ибрагимова Шахло", "online"));
+        list.add(new ListData(R.drawable.img3, "Холмуратов Азизбек Баходиржонович", "online"));
+        list.add(new ListData(R.drawable.img4, "Мухитдинова Гулноз Уктамбаевна", "last seen recently"));
+        list.add(new ListData(R.drawable.img5, "Мирсаидова Шахноза Шавкатовна", "last seen recently"));
+        list.add(new ListData(R.drawable.img6, "Абдуназаров Жавохирбек Ойбек ўғли", "last seen recently"));
+        list.add(new ListData(R.drawable.img7, "Валиева Ханифахон Негматовна", "last seen recently"));
+        list.add(new ListData(R.drawable.img8, "Шамансурова Гулноза Хасановна", "last seen recently"));
+        list.add(new ListData(R.drawable.img1, "Юлдашева Назира Мирмақсудовна", "last seen recently"));
+        list.add(new ListData(R.drawable.img2, "Ибрагимова Шахло", "last seen recently"));
+        list.add(new ListData(R.drawable.img3, "Холмуратов Азизбек Баходиржонович", "last seen recently"));
+        list.add(new ListData(R.drawable.img4, "Мухитдинова Гулноз Уктамбаевна", "last seen recently"));
+        list.add(new ListData(R.drawable.img5, "Мирсаидова Шахноза Шавкатовна", "last seen recently"));
+        list.add(new ListData(R.drawable.img6, "Абдуназаров Жавохирбек Ойбек ўғли", "last seen recently"));
+        list.add(new ListData(R.drawable.img7, "Валиева Ханифахон Негматовна", "last seen recently"));
+        list.add(new ListData(R.drawable.img8, "Шамансурова Гулноза Хасановна", "last seen recently"));
     }
 
 }

@@ -17,6 +17,9 @@
     <style name="circle">
         <item name="cornerSize">50%</item>
     </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 
     <style name="NavigationDrawerStyle">
         <item name="android:textSize">17sp</item>

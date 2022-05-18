@@ -1,66 +1,113 @@
 package com.example.telegramclone.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.telegramclone.R;
+import com.google.android.material.imageview.ShapeableImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AppearanceFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppearanceFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AppearanceFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AppearanceFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AppearanceFragment newInstance(String param1, String param2) {
-        AppearanceFragment fragment = new AppearanceFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    RecyclerView recyclerView;
+    List<ListApperance> list = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_appearance, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setHasFixedSize(true);
+        MyAdapter adapter = new MyAdapter(this.getActivity(), list);
+        recyclerView.setAdapter(adapter);
+        data();
+
+    }
+
+    private void data() {
+        list.add(new ListApperance(R.drawable.img1));
+        list.add(new ListApperance(R.drawable.img2));
+        list.add(new ListApperance(R.drawable.img3));
+        list.add(new ListApperance(R.drawable.img4));
+        list.add(new ListApperance(R.drawable.img5));
+        list.add(new ListApperance(R.drawable.img6));
+        list.add(new ListApperance(R.drawable.img7));
+        list.add(new ListApperance(R.drawable.img8));
+    }
+
+}
+
+class ListApperance {
+    int image;
+
+    public ListApperance(int image) {
+        this.image = image;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+}
+
+class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+    private final Context context;
+    private final List<ListApperance> list;
+
+    public MyAdapter(Context context, List<ListApperance> list) {
+        this.context = context;
+        this.list = list;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.apperance_list, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        ListApperance data = list.get(position);
+        holder.iv_profile.setImageResource(data.getImage());
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView iv_profile;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            iv_profile = itemView.findViewById(R.id.iv_profile);
+        }
     }
 }
