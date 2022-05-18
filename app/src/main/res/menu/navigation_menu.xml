@@ -6,7 +6,7 @@
         android:title="Profile" />
     <item
         android:id="@+id/menuContacts"
-        android:icon="@drawable/ic_contact"
+        android:icon="@drawable/ic_contacts"
         android:title="Contacts" />
     <item
         android:id="@+id/menuNotifications"
